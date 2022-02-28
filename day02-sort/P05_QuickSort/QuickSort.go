@@ -45,7 +45,7 @@ func QuickSortRandom(arr []int) []int {
 			mid = append(mid, splitNum)
 		}
 	}
-	low, high = QuickSort(low), QuickSort(high)
+	low, high = QuickSortRandom(low), QuickSortRandom(high)
 	return append(append(low, mid...), high...)
 }
 
