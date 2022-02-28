@@ -28,24 +28,11 @@ func InsertSort1(arr []int) []int {
 	return arr
 }
 
-func InsertSort2(arr []int) []int {
-	size := len(arr)
-	if size == 1 {
-		return arr
-	}
-	for i := size - 2; i >= 0; i-- {
-		j := i
-		for ; j < size-1 && backup > arr[j+1]; j++ {
-			arr[j+1] = arr[j]
-		}
-		arr[i] = backup
-	}
-	return arr
-}
+// todo: 正向交换
 
 func main() {
 	arr := []int{100, 19, 29, 8, 3, 7, 4, 6, 5, 10}
 	fmt.Println(InsertTest(arr))
-	//fmt.Println(InsertSort1(arr))
-	fmt.Println(InsertSort2(arr))
+	fmt.Println(InsertSort1(arr))
+	//fmt.Println(InsertSort2(arr))
 }
